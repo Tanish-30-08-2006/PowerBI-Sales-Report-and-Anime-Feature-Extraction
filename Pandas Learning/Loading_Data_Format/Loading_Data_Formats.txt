@@ -1,0 +1,30 @@
+# Pandas and numpy cant create data , we need to LOAD csv , tsv , excel files to fetch data and then we pass it to python libraries ..
+
+# Now , pandas support numerous file formats from which we can read data to clean it , preprocess it ,  or analyse it ..
+
+================================================================================
+PANDAS FILE I/O CHEAT SHEET (LOAD METHODS)
+================================================================================
+
+Format                          Extension           Method to Load in Pandas
+--------------------------------------------------------------------------------
+CSV (Comma-Separated)           .csv                pd.read_csv('file.csv')
+Excel                           .xls, .xlsx         pd.read_excel('file.xlsx')
+JSON (JavaScript Notation)      .json               pd.read_json('file.json')
+Text                            .txt                pd.read_csv('file.txt', sep=' ')
+TSV (Tab-Separated)             .tsv                pd.read_csv('file.tsv', sep='\t')
+HTML Tables                     .html               pd.read_html('file.html')
+SQL Database                    .db, .sqlite        pd.read_sql(query, connection)
+Parquet                         .parquet            pd.read_parquet('file.parquet')
+Feather                         .feather            pd.read_feather('file.feather')
+Pickle                          .pkl, .pickle       pd.read_pickle('file.pkl')
+HDF5 (Hierarchical Data)        .h5                 pd.read_hdf('file.h5')
+ORC (Optimized Row Columnar)    .orc                pd.read_orc('file.orc')
+Google Sheets                   (URL)               Use gspread, pandas + API
+
+================================================================================
+NOTES FOR DA-IICT PROJECTS:
+- Use 'index=False' when saving to CSV to avoid the "Unnamed: 0" column bug.
+- Parquet/Feather are best for large datasets (faster than CSV).
+- Pickle preserves your exact Python/NumPy data types perfectly.
+================================================================================
