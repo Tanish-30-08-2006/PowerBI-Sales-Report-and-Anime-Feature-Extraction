@@ -1,0 +1,7 @@
+Pivot tables are used for aggregation functions so values must be numeric quantitites to calculate mean variance median std deviation etc..
+
+Pivot tables are used in seaborn matplotlib for heat map clusters ...
+
+pd.pivot_table(df,values='Q1',index='Category1',columns= 'Category2',aggfunc='mean/std..',margins='True')
+
+Cross Tabs are used for calculating counts
